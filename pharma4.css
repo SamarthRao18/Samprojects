@@ -1,0 +1,420 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('./background.jpg') repeat;
+    color: #333;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Light blue */
+}
+
+section {
+    display: none;
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+section.active {
+    display: block;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007BFF; /* Light blue */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    background: #28A745; /* Green */
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form select, form button {
+    margin-bottom: 10px;
+}
+
+form input, form select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input::placeholder {
+    color: #888;
+}
+
+form button {
+    padding: 10px;
+    background: #28A745; /* Green */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #333;
+    color: #fff;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    border: none;
+    background: #28A745; /* Green */
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.product-card button:hover {
+    background: #333;
+    color: #fff;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    background: #FFEBEE; /* Light peach */
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item h3, .cart-item p {
+    margin: 0;
+    color: #333;
+}
+
+.cart-item button {
+    padding: 5px 10px;
+    border: none;
+    background: #FF5733; /* Bright peach */
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cart-item button:hover {
+    background: #cc0000;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Doctor Images */
+.doctor-info {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.doctor-info img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.doctor-info textarea {
+    font-weight: bold;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="email"],
+.modal-content form input[type="password"],
+.modal-content form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-content form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content form button:hover {
+    background-color: #45a049;
+}
+
+/* Display the selected doctor's image */
+#doctor option[value="dr_janardhan"]:checked ~ #dr_janardhan_info,
+#doctor option[value="dr_ck_manjunath"]:checked ~ #dr_ck_manjunath_info,
+#doctor option[value="dr_devi_shetty"]:checked ~ #dr_devi_shetty_info {
+    display: block;
+}
+
+.error-modal {
+    display: flex; /* Center the modal content horizontally */
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Keep the modal on top of other content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    z-index: 10; /* Ensure modal is above other elements */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    max-width: 400px; /* Limit modal width */
+    text-align: center; /* Center error message text */
+  }
+  
+  .modal-content button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Indicate clickable button */
+  }
+  
+  .modal-content button:hover {
+    background-color: #45A049; /* Darken button on hover */
+  }
+  
+  #user_name {
+    /*position: absolute; /* Make the box positioned relative to the viewport */
+    float:right;
+    top: 10px; /* Set top position from the top of the page */
+    right: 10px; /* Set right position from the right edge of the page */
+    background-color: #f0f0f0; /* Light gray background color */
+    padding: 5px; /* Add some padding for better text visibility */
+    border-radius: 5px; /* Rounded corners for a cleaner look */
+    font-size: 14px;
+    color: blue;
+    border: none;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+#appointment_alert input[type="text"] {
+    float: left;
+    top: 10px;
+    right: 10px;
+    box-sizing: content-box;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: blue;
+    border: none;
+    animation: blink 1s infinite;
+    width: 500px;  /* Adjust width as needed */
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+  
+  
+  
+ 
